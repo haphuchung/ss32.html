@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #999;
+            cursor: pointer;
+        }
+        h2 {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn">Bấm vào tôi</button>
+    <h2>Số lần bấm: <span id="count">0</span></h2>
+
+    <script>
+        let count = 0; 
+        const btn = document.getElementById("btn");
+        const countDisplay = document.getElementById("count");
+
+        btn.addEventListener("click", function () {
+            count++; 
+            countDisplay.textContent = count; 
+        });
+    </script>
+
+</body>
+</html>

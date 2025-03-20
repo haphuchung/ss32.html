@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .increase {
+            background-color: green;
+        }
+        .decrease {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="text">Chữ sẽ thay đổi kích thước khi bấm nút</p>
+    
+    <button class="btn increase" onclick="changeFontSize(2)">+</button>
+    <button class="btn decrease" onclick="changeFontSize(-2)">-</button>
+
+    <script>
+        let fontSize = 20; 
+
+        function changeFontSize(change) {
+            fontSize += change;
+            if (fontSize < 10) fontSize = 10;
+            if (fontSize > 50) fontSize = 50;
+            document.getElementById("text").style.fontSize = fontSize + "px";
+        }
+    </script>
+</body>
+</html>

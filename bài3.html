@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input, button {
+            font-size: 16px;
+            padding: 5px;
+        }
+    </style>
+        
+</head>
+<body>
+    
+    <input type="text" id="subjectInput" placeholder="Nhập tên môn học">
+    <button id="addSubjectBtn">Thêm môn học</button>
+
+    <ol id="subjectList">
+        <li>Toán</li>
+        <li>Lý</li>
+        <li>Hóa</li>
+    </ol>
+
+    <script>
+        const input = document.getElementById("subjectInput");
+        const button = document.getElementById("addSubjectBtn");
+        const list = document.getElementById("subjectList");
+
+        button.addEventListener("click", function () {
+            const subjectName = input.value.trim(); 
+
+            if (subjectName === "") {
+                alert("Tên môn học không được để trống!"); 
+                return;
+            }
+
+            const listItem = document.createElement("li"); 
+            listItem.textContent = subjectName; 
+
+            list.appendChild(listItem); 
+
+            input.value = ""; 
+            input.focus(); 
+        });
+    </script>
+</body>
+</html>

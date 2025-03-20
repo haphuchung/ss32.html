@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center; 
+        }
+        .container {
+            margin-top: 20%;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            background-color: gray;
+            color: black;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Nhấn để đổi màu nền</h2>
+        <button onclick="changeBackgroundColor()">Đổi màu nền</button>
+    </div>
+
+    <script>
+        function changeBackgroundColor() {
+            const colors = ["red", "green", "blue", "yellow", "purple", "orange", "pink", "brown", "gray", "black"];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.body.style.backgroundColor = randomColor;
+        }
+    </script>
+</body>
+</html>
